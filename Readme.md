@@ -1,6 +1,6 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-* Студент: [Тимур К](https://up.htmlacademy.ru/adaptive/13/user/561605).
+* Студент: [Тимур K](https://up.htmlacademy.ru/adaptive/13/user/561605).
 * Наставник: [Дмитрий Походня](https://htmlacademy.ru/profile/id166319).
 
 ---
