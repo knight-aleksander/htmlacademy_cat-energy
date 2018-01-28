@@ -2,12 +2,19 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Выбор программы</title>
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__logo main-logo">
-          <a class="main-logo__link" href="index.html"><img class="main-logo__image" src="#" alt=""><b class="main-logo__text--bold">CAT</b> ENERGY</a>
+      <div class="page-header__logo logo-image logo-text">
+        <div class="logo-text__wrapper logo-image__wrapper">
+          <a class="logo-image__link" href="index.html">
+            <img class="logo-image__image" src="#" alt="">
+          </a>
+          <a class="logo-text__link" href="index.html">
+            <span class="logo-text__text"><b class="logo-text__text--bold">CAT</b> ENERGY</span>
+          </a>
+        </div>
       </div>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button"></button>
@@ -34,90 +41,111 @@
 
     <main class="page-main">
 
-      <h1 class="main-header">Подбор программы</h1>
-
       <section class="form">
+        <div class="form__wrapper">
+          <h1 class="form__title">Подбор программы</h1>
+          <p class="form__subtitle">Заполните анкету и&nbsp;мы&nbsp;подберём программу питания для вашего кота</p>
 
-        <p class="form__subtitle">Заполните анкету и мы подберём программу питания для вашего кота</p>
-        <form class="client-form__form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="pet-form">
-            <legend class="visually-hidden">Анкета питомца</legend>
+          <form class="client-form__form" action="https://echo.htmlacademy.ru" method="post">
+            <fieldset>
+              <div class="pet-form">
+                <h2 class="visually-hidden">Анкета питомца</h2>
+                <label for="f-name">Имя:*</label>
+                <input type="text" id="f-name" name="pet-name">
+                <label for="f-weight">Вес (кг):*</label>
+                <input type="number" id="f-weight" name="pet-weigt">
+                <label for="f-age">Возраст (лет):</label>
+                <input type="number" id="f-age" name="pet-age">
+              </div>
+            </fieldset>
 
-            <label for="f-name">Имя:*</label>
-            <input type="text" id="f-name" name="pet-name">
-            <label for="f-weight">Вес (кг):*</label>
-            <input type="number" id="f-weight" name="pet-weigt">
-            <label for="f-age">Возраст (лет):</label>
-            <input type="number" id="f-age" name="pet-age">
-          </fieldset>
+            <fieldset>
+              <div class="goal-form">
+                <h2 class="visually-hidden">Цель программы</h2>
+                <input type="radio" id="f-slim" name="goal" value="slim">
+                <label for="f-slim">Похудение</label>
+                <input type="radio" id="f-mass" name="goal" value="mass">
+                <label for="f-mass">Набор массы</label>
+                <input type="radio" id="f-advice" name="goal" value="need_advice">
+                <label for="f-advice">Не знаю (нужен ваш совет)</label>
+              </div>
+            </fieldset>
 
-          <fieldset>
-            <legend class="visually-hidden">Цель программы</legend>
-            <input type="radio" id="f-slim" name="goal" value="slim">
-            <label for="radio-1">Похудение</label>
-            <input type="radio" id="f-mass" name="goal" value="mass">
-            <label for="radio-2">Набор массы</label>
-            <input type="radio" id="f-advice" name="goal" value="need_advice">
-            <label for="radio-3">Не знаю (нужен ваш совет)</label>
-          </fieldset>
+            <fieldset>
+              <div class="client-form">
+                <h2 class="client-form__title">Контактные данные (владельца кота)</h2>
+                <label for="f-email">E-mail:*</label>
+                <input type="email" id="f-email" name="usr-email">
+                <label for="f-phone">Телефон:*</label>
+                <input type="tel" id="f-phone" name="usr-phone">
+              </div>
+            </fieldset>
 
-          <fieldset class="client-form">
-            <legend class="client-form__title">Контактные данные (владельца кота)</legend>
-              <label for="f-email">E-mail:*</label>
-              <input type="email" id="f-email" name="usr-email">
-              <label for="f-phone">Телефон:*</label>
-              <input type="tel" id="f-phone" name="usr-phone">
-          </fieldset>
+            <fieldset>
+              <div class="comment">
+                <h2 class="comment__title">Комментарий</h2>
+                <textarea class="comment__input" name="usr-comment" cols="30" rows="10" placeholder="РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА"></textarea>
+              </div>
+            </fieldset>
 
-          <fieldset class="comment">
-            <legend class="comment__title">Комментарий</legend>
-            <textarea class="comment__input" name="usr-comment" id="" cols="30" rows="10" placeholder="РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА"></textarea>
-          </fieldset>
+            <fieldset>
+              <div class="conditions">
+                <h2 class="conditions__title">Дополнительно</h2>
+                <input type="checkbox" id="f-sugar" name="conditions" value="sweetener">
+                <label for="f-sugar">Сахарозаменитель</label>
+                <input type="checkbox" id="f-water" name="conditions" value="water">
+                <label for="f-water">Питьевая вода</label>
+                <input type="checkbox" id="f-milk" name="conditions" value="milk">
+                <label for="f-milk">Молоко</label>
+                <input type="checkbox" id="f-vitamins" name="conditions" value="vitamins">
+                <label for="f-vitamins">Витамины</label>
+              </div>
+            </fieldset>
 
-          <fieldset class="conditions">
-            <legend class="conditions__title">Дополнительно</legend>
-            <input type="checkbox" class="f-sugar" name="conditions" value="sweetener">
-            <label for="f-sugar">Сахарозаменитель</label>
-            <input type="checkbox" id="f-water" name="conditions" value="water">
-            <label for="f-water">Питьевая вода</label>
-            <input type="checkbox" id="f-milk" name="conditions" value="milk">
-            <label for="f-milk">Молоко</label>
-            <input type="checkbox" id="f-vitamins" name="conditions" value="vitamins">
-            <label for="f-vitamins">Витамины</label>
-          </fieldset>
-
-          <button class="button form__button" type="submit">Отправить заявку</button>
-          <small class="client-form__legend">* - Обязательные поля</small>
-        </form>
+            <button class="button form__button" type="submit">Отправить заявку</button>
+            <small class="client-form__legend">* - Обязательные поля</small>
+          </form>
+        </div>
       </section>
     </main>
 
     <footer class="page-footer">
-      <div class="page-footer__wrapper">
         <div class="page-footer__contacts contacts">
-          <p class="contacts__title">Приглашаем к сотрудничеству дилеров!</p>
-          <address class="contacts__address address">ул. Большая конюшенная, д. 19/8 Санкт-Петербург</address>
-          <figure class="contacts__map"></figure>
+          <div class="page-footer__wrapper contacts__wrapper">
+            <p class="contacts__title">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
+            <address class="contacts__address address">ул. Большая конюшенная, д. 19/8 Санкт-Петербург</address>
+          </div>
+          <div class="contacts__map">
+            <img class="contacts__map-image" src="#" alt="карта">
+          </div>
         </div>
 
-        <div class="page-footer__logo main-logo">
-          <a class="main-logo__link" href="index.html"><b class="main-logo__text--bold">CAT</b> ENERGY</a>
+        <div class="page-footer__logo logo-text">
+          <div class="page-footer__wrapper logo-text__wrapper">
+            <a class="logo-text__link" href="index.html">
+              <span class="logo-text__text"><b class="logo-text__text--bold">CAT</b> ENERGY</span>
+            </a>
+          </div>
         </div>
-
 
         <div class="page-footer__social social">
-          <ul class="social__list">
-              <li class="social__item"><a class="social-link social-link--vk" href="#"></a></li>
-              <li class="social__item"><a class="social-link social-link-insta" href="#"></a></li>
-              <li class="social__item"><a class="social-link social-link-fb" href="#"></a></li>
-          </ul>
+          <div class="page-footer__wrapper social__wrapper">
+            <ul class="social__list">
+                <li class="social__item"><a class="social-link social-link--vk" href="#"></a></li>
+                <li class="social__item"><a class="social-link social-link-insta" href="#"></a></li>
+                <li class="social__item"><a class="social-link social-link-fb" href="#"></a></li>
+            </ul>
+          </div>
         </div>
 
         <div class="page-footer__copyright copyright">
-          <b class="copyright__name">HTML Academy</b>
-          <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <div class="copyright__wrapper">
+            <b class="copyright__name">HTML Academy</b>
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+              <img class="copyright__logo" src="#" alt="">
+            </a>
+          </div>
         </div>
-      </div>
     </footer>
   </body>
 </html>
