@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Выбор программы</title>
-    <link href="source/css/style.css" type="text/css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
@@ -45,40 +45,40 @@
       <section class="form">
         <div class="form__wrapper">
           <h1 class="form__title">Подбор программы</h1>
-          <p class="form__subtitle">Заполните анкету и&nbsp;мы&nbsp;подберём программу питания для вашего кота</p>
+          <p class="form__small">Заполните анкету и&nbsp;мы&nbsp;подберём программу питания для вашего кота</p>
 
-          <form class="client-form__form" action="https://echo.htmlacademy.ru" method="post">
+          <form class="form__content" action="https://echo.htmlacademy.ru" method="post">
             <fieldset>
               <div class="pet-form">
                 <h2 class="visually-hidden">Анкета питомца</h2>
-                <label for="f-name">Имя:*</label>
-                <input type="text" id="f-name" name="pet-name">
-                <label for="f-weight">Вес (кг):*</label>
-                <input type="number" id="f-weight" name="pet-weigt">
-                <label for="f-age">Возраст (лет):</label>
-                <input type="number" id="f-age" name="pet-age">
+                <label class="pet-form__field" for="f-name">Имя:*</label>
+                <input class="pet-form__value" type="text" id="f-name" name="pet-name">
+                <label class="pet-form__field" for="f-weight">Вес (кг):*</label>
+                <input class="pet-form__value" type="number" id="f-weight" name="pet-weigt">
+                <label class="pet-form__field" for="f-age">Возраст (лет):</label>
+                <input class="pet-form__value" type="number" id="f-age" name="pet-age">
               </div>
             </fieldset>
 
             <fieldset>
               <div class="goal-form">
                 <h2 class="visually-hidden">Цель программы</h2>
-                <input type="radio" id="f-slim" name="goal" value="slim">
-                <label for="f-slim">Похудение</label>
-                <input type="radio" id="f-mass" name="goal" value="mass">
-                <label for="f-mass">Набор массы</label>
-                <input type="radio" id="f-advice" name="goal" value="need_advice">
-                <label for="f-advice">Не знаю (нужен ваш совет)</label>
+                <input class="goal-form__value" type="radio" id="f-slim" name="goal" value="slim">
+                <label class="goal-form__field" for="f-slim">Похудение</label>
+                <input class="goal-form__value" type="radio" id="f-mass" name="goal" value="mass">
+                <label class="goal-form__field" for="f-mass">Набор массы</label>
+                <input class="goal-form__value" type="radio" id="f-advice" name="goal" value="need_advice">
+                <label class="goal-form__field" for="f-advice">Не знаю (нужен ваш совет)</label>
               </div>
             </fieldset>
 
             <fieldset>
               <div class="client-form">
                 <h2 class="client-form__title">Контактные данные (владельца кота)</h2>
-                <label for="f-email">E-mail:*</label>
-                <input type="email" id="f-email" name="usr-email">
-                <label for="f-phone">Телефон:*</label>
-                <input type="tel" id="f-phone" name="usr-phone">
+                <label class="client-form__field" for="f-email">E-mail:*</label>
+                <input class="client-form__value" type="email" id="f-email" name="usr-email">
+                <label class="client-form__field" for="f-phone">Телефон:*</label>
+                <input class="client-form__value" type="tel" id="f-phone" name="usr-phone">
               </div>
             </fieldset>
 
@@ -92,19 +92,19 @@
             <fieldset>
               <div class="conditions">
                 <h2 class="conditions__title">Дополнительно</h2>
-                <input type="checkbox" id="f-sugar" name="conditions" value="sweetener">
-                <label for="f-sugar">Сахарозаменитель</label>
-                <input type="checkbox" id="f-water" name="conditions" value="water">
-                <label for="f-water">Питьевая вода</label>
-                <input type="checkbox" id="f-milk" name="conditions" value="milk">
-                <label for="f-milk">Молоко</label>
-                <input type="checkbox" id="f-vitamins" name="conditions" value="vitamins">
-                <label for="f-vitamins">Витамины</label>
+                <input class="conditions__value" type="checkbox" id="f-sugar" name="conditions" value="sweetener">
+                <label class="conditions__field" for="f-sugar">Сахарозаменитель</label>
+                <input class="conditions__value" type="checkbox" id="f-water" name="conditions" value="water">
+                <label class="conditions__field" for="f-water">Питьевая вода</label>
+                <input class="conditions__value" type="checkbox" id="f-milk" name="conditions" value="milk">
+                <label class="conditions__field" for="f-milk">Молоко</label>
+                <input class="conditions__value" type="checkbox" id="f-vitamins" name="conditions" value="vitamins">
+                <label class="conditions__field" for="f-vitamins">Витамины</label>
               </div>
             </fieldset>
 
             <button class="button form__button" type="submit">Отправить заявку</button>
-            <small class="client-form__legend">* - Обязательные поля</small>
+            <small class="form__legend">* - Обязательные поля</small>
           </form>
         </div>
       </section>
