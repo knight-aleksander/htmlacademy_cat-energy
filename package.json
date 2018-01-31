@@ -36,5 +36,8 @@
   ],
   "engines": {
     "node": "8.9"
+  },
+  "dependencies": {
+    "html-test": "0.0.2"
   }
 }
