@@ -1,14 +1,79 @@
 .program-type {
-  background-color: #f2f2f2;
+  padding: 20px 20px 0 20px;
+  display: flex;
+  flex-direction: column;
 
   font-family: @font-family;
   font-style: normal;
   font-weight: 400;
 }
 
-.program-type__wrapper {}
+.program-type__container {
+  padding: 38px 20px 0 20px;
+  display: flex;
+  flex-direction: column;
 
-.program-type__header {}
+  background-color: @light-gray;
+  text-align: left;
+}
+
+.program-type__header {
+  margin: 0;
+  padding: 0 0 20px 72px;
+  position: relative;
+
+  font-family: @font-family;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.program-type__header--slim::before {
+  position: absolute;
+  bottom: 7px;
+  left: 2px;
+  content: "";
+  background-color: #68b738;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.program-type__header--slim::after {
+  position: absolute;
+  bottom: 12px;
+  left: 10px;
+  content: "";
+  background: no-repeat 0 0 url('../img/icon-cat-sit.svg');
+  width: 35px;
+  height: 49px;
+}
+
+.program-type__header--bulky::before {
+  position: absolute;
+  bottom: 7px;
+  left: 2px;
+  content: "";
+  background-color: #68b738;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.program-type__header--bulky::after {
+  position: absolute;
+  bottom: 18px;
+  left: -7px;
+  content: "";
+  background: no-repeat 0 0 url('../img/icon-cat-walk.svg');
+  width: 67px;
+  height: 28px;
+}
 
 .program-type__name {
   font-size: 24px;
@@ -18,15 +83,30 @@
 }
 
 .program-type__description {
+  margin-right: 5px;
   font-size: 14px;
   line-height: 18px;
+  font-family: 'Arial', sans-serif;
   color: @black;
-  text-transform: capitalize;
+  text-transform: none;
 }
 
 .program-type__link {
+  position: relative;
+  padding: 20px 0;
+
   font-size: 16px;
   line-height: 16px;
   color: @black;
   text-decoration: uppercase;
+
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.program-type__link::after {
+  position: absolute;
+
+
+  content: "";
+  background-image: url('../img/')
 }

@@ -1,6 +1,9 @@
 .program-features {
-  background-color: #ffffff;
-
+  min-height: 383px;
+  margin-top: 32px;
+  margin-bottom: 7px;
+  display: flex;
+  flex-direction: column;
   font-style: normal;
   font-weight: 400;
   font-family: @font-family;
@@ -9,18 +12,83 @@
 .program-features__wrapper {}
 
 .program-features__title {
+  margin: 0 0 35px 0;
+
+  font-family: @font-family;
+  font-weight: 400;
   font-size: 36px;
-  line-height: 60px;
+  line-height: 36px;
   color: @black;
-  text-transform: capitalize;
+  text-transform: none;
 }
 
-.program-features__list {}
+.program-features__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
 
 .program-features__description {
+  position: relative;
+  margin: 10px 0 10px 80px;
+
   font-family: 'Arial', sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: @gray;
-  text-transform: capitalize;
+  text-transform: none;
+}
+
+.program-features__description--leaf::before {
+  position: absolute;
+  top: -3.2px;
+  left: -80px;
+  content: "";
+  background: url("../img/advantage-leaf@1x.png");
+  background-repeat: no-repeat;
+  background-color: #68b738;
+  background-position: center;
+  width: 60px;
+  height: 60px;
+}
+
+.program-features__description--powder::before {
+  position: absolute;
+  top: -3.2px;
+  left: -80px;
+  content: "";
+  background: url("../img/advantage-powder@1x.png");
+  background-repeat: no-repeat;
+  background-color: #68b738;
+  background-position: center;
+  width: 60px;
+  height: 60px;
+}
+
+.program-features__description--dining::before {
+  position: absolute;
+  top: -3.2px;
+  left: -80px;
+  content: "";
+  background: url("../img/advantage-dining@1x.png");
+  background-repeat: no-repeat;
+  background-color: #68b738;
+  background-position: center;
+  width: 60px;
+  height: 60px;
+}
+
+.program-features__description--clock::before {
+  position: absolute;
+  top: -3.2px;
+  left: -80px;
+  content: "";
+  background: url("../img/advantage-clock@1x.png");
+  background-repeat: no-repeat;
+  background-color: #68b738;
+  background-position: center;
+  width: 60px;
+  height: 60px;
 }

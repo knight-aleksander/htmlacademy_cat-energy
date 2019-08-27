@@ -1,21 +1,56 @@
 .goal-form {
-  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
 
   font-style: normal;
   font-weight: 400;
-  font-size: @font-family;
-  line-height: @line-h;
+  font-size: 16px;
+  line-height: 16px;
   font-family: @font-family;
-  text-align: center;
   color: @black;
   text-transform: uppercase;
+
+  border-bottom: 1px solid #ededed;
 }
 
 
-.goal-form__container {}
+.goal-form__container {
+  padding: 13px 0;
+}
 
-.goal-form__subcontainer {}
+.goal-form__subcontainer {
+  position: relative;
+  padding: 13px 0;
 
-.goal-form__value {}
+}
 
-.goal-form__field {}
+.goal-form__input {
+}
+
+.goal-form__label {
+  position: relative;
+  padding-left: 44px;
+  cursor: pointer;
+}
+
+.goal-form__input + .goal-form__label::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #ededed;
+}
+
+.goal-form__input:not(:disabled):checked + .goal-form__label::after {
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #68b738;
+}

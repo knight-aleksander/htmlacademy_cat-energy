@@ -1,0 +1,35 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+
+  background-color: @light-gray;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: @font-size;
+  line-height: 20px;
+  font-family: @font-family;
+  color: @black;
+  text-transform: uppercase;
+}
+
+.footer__map-contacts {}
+
+.footer__logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.footer__logo-text {
+  flex-grow: 1;
+}
+
+.footer__social {}
+
+.footer__copyright {}
+
+@media (min-width: @tablet-width) {
+  .footer {
+    padding-top: 66px;
+  }
+}

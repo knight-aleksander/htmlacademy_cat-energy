@@ -1,15 +1,21 @@
 .program {
-  background-color: #ffffff;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
 
   font-style: normal;
   font-family: @font-family;
+
+  background: no-repeat 0 0 / auto 305px url('../img/index-background-mobile@1x.jpg'),
+  linear-gradient(to bottom, @green, @green 305px, #fff 305px, #fff);
 }
 
-.program__wrapper {}
-
 .program__header {
-  background-image: url('img\index-background-mobile@1x.jpg');
-  background-color: @green;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 305px;
 }
 
 .program__title {
@@ -17,29 +23,65 @@
   font-size: 36px;
   line-height: 36px;
   text-align: center;
-  color: #ffffff;
-  text-transform: capitalize;
+  color: @white;
+  text-transform: none;
 }
 
 .program__subtitle {
+  padding-bottom: 300px;
+
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
   text-align: center;
-  color: #ffffff
+  color: @white;
 }
 
-.program__image {}
+.program__image {
+  position: absolute;
+  align-self: center;
+  top: 167px;
+}
 
 .program__button {
-  background-color: @green;
+  margin: 0;
 
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 18px;
-  font-family: @font-family;
+  line-height: 40px;
   text-align: center;
-  color: #ffffff;
+  color: @white;
   text-transform: uppercase;
+ }
+
+
+@media (min-width: @tablet-width) {
+  .program__header {
+    margin-left: 90px;
+    margin-right: 192px;
+    margin-bottom: 513px;
+    min-height: 0;
+    background: none;
+  }
+  .program__title {
+    margin-bottom: 45px;
+    font-size: 60px;
+    line-height: 60px;
+    color: @black;
+    text-align: left;
+  }
+  .program__subtitle {
+    font-size: 20px;
+    line-height: 20px;
+    color: @black;
+    text-align: left;
+  }
+  .program__image {
+    z-index: -1;
+  }
+  .program__button {
+    margin: 45px 181px 0 0;
+    text-align: center;
+  }
 }
