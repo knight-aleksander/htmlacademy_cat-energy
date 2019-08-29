@@ -6,20 +6,17 @@
 
   background-color: @light-gray;
 
-  font-style: normal;
-  font-weight: 400;
   font-family: @font-family;
 }
-
-.program-example__wrapper {}
 
 .program-example__title {
   margin: 33px 0;
   font-size: 36px;
-  line-height: 36px;
+  line-height: 1;
   font-family: @font-family;
   color: @black;
   text-transform: none;
+  font-weight: 400;
 }
 
 .program-example__text {
@@ -44,7 +41,7 @@
 .program-example__value {
   display: flex;
   font-size: 24px;
-  line-height: 24px;
+  line-height: 1;
   font-family: @font-family;
   color: @black;
   text-transform: uppercase;
@@ -70,7 +67,7 @@
   background-color: @light-gray;
 
   font-size: 12px;
-  line-height: 12px;
+  line-height: 1;
   font-family: 'Arial', sans-serif;
   color: @gray;
   text-transform: lowercase;
@@ -152,3 +149,53 @@
 .program-example__button--before {}
 
 .program-example__button--after {}
+
+@media (min-width: @tablet-width) {
+  .program-example {
+    padding: 48px 30px 0;
+    background: #fff;
+  }
+
+  .program-example__title {
+    margin: 0;
+    margin-bottom: 66px;
+    font-size: 60px;
+  }
+
+  .program-example__text {
+    margin-bottom: 54px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .program-example__stats {
+    justify-content: flex-start;
+  }
+
+  .program-example__value-container {
+
+  }
+
+  .program-example__value {
+    min-width: 162px;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    font-size: 30px;
+  }
+
+  .program-example__value--weight {
+
+  }
+
+  .program-example__value
+
+  .program-example__small {
+    padding: 0 8px;
+    font-size: 14px;
+    line-height: 1;
+    background-color: #ffffff;
+
+  }
+}

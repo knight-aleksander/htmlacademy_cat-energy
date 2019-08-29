@@ -58,31 +58,47 @@
 
 
 @media (min-width: @tablet-width) {
+  .program {
+    padding-left: 120px;
+    padding-bottom: 533px;
+    background: none;
+  }
+
   .program__header {
-    margin-left: 90px;
-    margin-right: 192px;
-    margin-bottom: 513px;
+    padding-right: 30px;
     min-height: 0;
     background: none;
   }
   .program__title {
-    margin-bottom: 45px;
+    margin: 0;
+    margin-bottom: 43px;
+    padding-right: 192px;
     font-size: 60px;
-    line-height: 60px;
+    line-height: 1;
     color: @black;
     text-align: left;
   }
   .program__subtitle {
+    margin-bottom: 43px;
+    padding: 0;
     font-size: 20px;
     line-height: 20px;
     color: @black;
     text-align: left;
+    text-transform: uppercase;
   }
   .program__image {
+    top: 201px;
+
+    width: 709px;
+    height: 609px;
     z-index: -1;
   }
   .program__button {
-    margin: 45px 181px 0 0;
+    width: auto;
+    padding: 16px 28px 16px 26px;
+    margin-right: auto;
+    font-size: 20px;
     text-align: center;
   }
 }

@@ -17,7 +17,7 @@
   font-family: @font-family;
   font-weight: 400;
   font-size: 36px;
-  line-height: 36px;
+  line-height: 1;
   color: @black;
   text-transform: none;
 }
@@ -30,7 +30,7 @@
   list-style: none;
 }
 
-.program-features__description {
+.program-features__item {
   position: relative;
   margin: 10px 0 10px 80px;
 
@@ -41,7 +41,7 @@
   text-transform: none;
 }
 
-.program-features__description--leaf::before {
+.program-features__item--leaf::before {
   position: absolute;
   top: -3.2px;
   left: -80px;
@@ -54,7 +54,7 @@
   height: 60px;
 }
 
-.program-features__description--powder::before {
+.program-features__item--powder::before {
   position: absolute;
   top: -3.2px;
   left: -80px;
@@ -67,7 +67,7 @@
   height: 60px;
 }
 
-.program-features__description--dining::before {
+.program-features__item--dining::before {
   position: absolute;
   top: -3.2px;
   left: -80px;
@@ -80,7 +80,7 @@
   height: 60px;
 }
 
-.program-features__description--clock::before {
+.program-features__item--clock::before {
   position: absolute;
   top: -3.2px;
   left: -80px;
@@ -91,4 +91,63 @@
   background-position: center;
   width: 60px;
   height: 60px;
+}
+
+@media (min-width: @tablet-width) {
+  .program-features {
+    margin: 0;
+    padding: 0 30px 55px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  .program-features__title {
+    margin-bottom: 72px;
+    font-size: 60px;
+  }
+
+  .program-features__list {
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  .program-features__item {
+    min-height: 228px;
+    flex: 0 1 250px;
+    margin: 0;
+    margin-bottom: 89px;
+    padding-top: 112px;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+  }
+
+  .program-features__item:nth-last-child(-n+2) {
+    margin-bottom: 0;
+  }
+
+  .program-features__item--leaf::before,
+  .program-features__item--powder::before,
+  .program-features__item--dining::before,
+  .program-features__item--clock::before {
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+  }
+
+  .program-features__item--leaf {
+    background: no-repeat 126px 0 / contain url("../img/background/1.png");
+  }
+
+  .program-features__item--powder {
+    background: no-repeat 122px 0 / contain url("../img/background/2.png");
+  }
+
+  .program-features__item--dining {
+    background: no-repeat 124px 0 / contain url("../img/background/3.png");
+  }
+
+  .program-features__item--clock {
+    background: no-repeat 125px 0 / contain url("../img/background/4.png");
+  }
 }
