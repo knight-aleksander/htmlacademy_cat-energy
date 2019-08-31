@@ -28,13 +28,10 @@
 }
 
 .pet-form__input {
-  padding: 13px;
+  display: flex;
   flex-grow: 1;
-
-  font-size: @font-size;
-  line-height: @line-h;
+  padding: 13px;
   font-family: @font-family;
-  color: @black;
   text-transform: uppercase;
 }
 
@@ -42,4 +39,32 @@
   font-family: @font-family;
   font-size: @font-size;
   color: #444444;
+}
+
+@media (min-width: @tablet-width) {
+  .pet-form {
+    margin-bottom: 73px;
+    padding: 0 70px 0 65px;
+    border-bottom: none;
+  }
+
+  .pet-form__subcontainer:last-child {
+    padding-bottom: 0;
+  }
+
+
+  .pet-form__input {
+    min-height: 52px;
+    padding: 0;
+    padding-left: 17px;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .pet-form__input::placeholder {
+    font-size: 20px;
+    line-height: 20px;
+    color: #444444;
+  }
+
 }
