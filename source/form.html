@@ -42,9 +42,9 @@
   </header>
   <main class="page-main">
     <h1 class="title title--form">Подбор програмы</h1>
-    <section class="form">
+    <section class="wrapper form">
       <h2 class="visually-hidden">Анкета питомца</h2>
-      <p class="form__small ">Заполните анкету и&nbsp;мы&nbsp;подберём
+      <p class="form__subheader ">Заполните анкету и&nbsp;мы&nbsp;подберём
         <br>программу питания для вашего кота</p>
       <form class="form__content" action="https://echo.htmlacademy.ru" method="post">
         <div class="pet-form ">
@@ -80,8 +80,10 @@
             </div>
           </div>
         </div>
-        <div class="client-form ">
-          <h2 class="client-form__title">Контактные данные (владельца кота)</h2>
+        <div class="client-form">
+          <div class="form__title-container client-form__title-container">
+            <h2 class="form__title client-form__title">Контактные данные (владельца кота)</h2>
+          </div>
           <div class="client-form__container">
             <div class="client-form__subcontainer">
               <label class="form__label client-form__label" for="f-email">E-mail:*</label>
@@ -93,12 +95,16 @@
             </div>
           </div>
         </div>
-        <div class="comment ">
-          <h2 class="comment__title">Комментарий</h2>
-          <textarea class="comment__input" name="usr-comment" cols="30" rows="10" placeholder="РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА"></textarea>
+        <div class="comment">
+          <div class="form__title-container comment__title-container">
+            <h2 class="form__title comment__title">Комментарий</h2>
+          </div>
+          <textarea class="comment__textarea" name="usr-comment" cols="30" rows="10" placeholder="РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА"></textarea>
         </div>
-        <div class="conditions ">
-          <h2 class="conditions__title">Дополнительно</h2>
+        <div class="conditions">
+          <div class="form__title-container conditions__title-container">
+            <h2 class="form__title conditions__title">Дополнительно</h2>
+          </div>
           <div class="conditions__container">
             <div class="conditions__subcontainer">
               <input class="visually-hidden conditions__input" type="checkbox" id="f-sugar" name="conditions" input="sweetener">
@@ -118,8 +124,10 @@
             </div>
           </div>
         </div>
-        <button class="button form__button" type="submit">Отправить заявку</button>
-        <small class="form__legend">* — Обязательные поля</small>
+        <div class="form__button-container">
+          <button class="button form__button" type="submit">Отправить заявку</button>
+          <small class="form__legend">* — Обязательные поля</small>
+        </div>
       </form>
     </section>
   </main>
