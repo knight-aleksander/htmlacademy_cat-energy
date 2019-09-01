@@ -1,36 +1,104 @@
 .show-all {
-  background-color: #ffffff;
+  position: relative;
+  padding-top: 82px;
+  display: flex;
+  flex-direction: column;
+
+  border-bottom: 1px solid #ededed;
+
   font-family: @font-family;
-  color: @black;
 }
 
 .show-all__wrapper {}
 
 .show-all__text {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
+  margin: 0;
+  padding-bottom: 12px;
   text-align: center;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
   color: @black;
 }
 
+.show-all__text::before {
+  position: absolute;
+  left: 156px;
+  top: 56px;
+  width: 30px;
+  height: 30px;
+}
+
 .show-all__small {
+  text-align: center;
+
   font-weight: 400;
   font-size: 12px;
-  line-height: 16px;
-  text-transform: capitalize;
-  text-align: center;
+  line-height: 12px;
+  font-family: 'Arial', sans-serif;
+  text-transform: none;
   color: @gray;
 }
 
 .show-all__button {
-  background-color: #f2f2f2;
-  font-weight: 500;
+  margin: 23px 0 24px 0;
+  padding: 13px 0px;
+
+  background-color: @light-gray;
+  font-weight: 400;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 16px;
   font-family: @font-family;
-  text-align: center;
   color: @light-black;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .show-all {
+    padding-top: 162px;
+    background-color: transparent;
+    border: 1px solid #e6e6e6;
+  }
+
+  .show-all::before {
+    position: absolute;
+    top: 83px;
+    left: 132px;
+    content: "";
+    width: 60px;
+    height: 2px;
+    opacity: 0.2;
+    background-color: #828181;
+  }
+
+  .show-all::after {
+    position: absolute;
+    top: 54px;
+    left: 161px;
+    content: "";
+    width: 2px;
+    height: 60px;
+    opacity: 0.2;
+    background-color: #828181;
+  }
+
+  .show-all__text {
+    margin-bottom: 26px;
+    padding: 0 53px;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .show-all__small {
+    padding: 0 37px;
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  .show-all__button {
+    margin-top: auto;
+    margin-bottom: 0;
+  }
 }

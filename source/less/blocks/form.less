@@ -1,42 +1,137 @@
 .form {
-  background-color: @white;
+  padding-bottom: 9px;
+  display: flex;
+  flex-direction: column;
 
   font-weight: 400;
   font-size: @font-size;
   line-height: @line-h;
   font-family: @font-family;
-  text-align: center;
   color: @black;
   text-transform: uppercase;
+  overflow: hidden;
 }
 
-.form__wrapper {}
 
-.form__small {
+.form__subheader {
+  margin: 0;
+  padding-top: 14px;
+  padding-bottom: 38px;
+
   font-size: 14px;
   line-height: 18px;
 }
 
-.form__content {}
+.form__content {
+  display: flex;
+  flex-direction: column;
+}
 
 .form__button {
+  min-height: 52px;
+  margin: 0 20px;
+  padding: 0 78px;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
   background-color: @green;
 
   font-weight: 400;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1;
   font-family: @font-family;
-  text-align: center;
-  color: #ffffff;
+  color: @white;
   text-transform: uppercase;
 }
 
 .form__legend {
+  padding: 24px 0;
+
   font-weight: 400;
   font-size: 14px;
-  line-height: 16px;
-  font-family: @font-family;
+  line-height: 1;
+  font-family: 'Arial', sans-serif;
   text-align: center;
   color: @gray;
-  text-transform: uppercase;
+  text-transform: none;
+}
+
+.form__title {
+  position: relative;
+  margin: 0;
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 400;
+  font-family: @font-family;
+}
+
+@media (min-width: @tablet-width) {
+  .form {
+    margin-bottom: 72px;
+    padding-bottom: 0;
+  }
+
+  .form__label {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .form__text-input {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .form__subheader {
+    margin-bottom: 64px;
+    padding-bottom: 0;
+    padding-left: 40px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .form__title {
+    display: inline-block;
+    padding-left: 38px;
+    padding-right: 42px;
+    font-size: 36px;
+    line-height: 1;
+    text-transform: none;
+  }
+
+  .form__title::before {
+    position: absolute;
+    top: 20px;
+    left: 100%;
+    content: '';
+    width: 100vw;
+    height: 3px;
+    background-color: #68b738;
+  }
+  .form__title::after {
+    position: absolute;
+    top: 20px;
+    right: 100%;
+    content: '';
+    width: 100vw;
+    height: 3px;
+    background-color: #68b738;
+  }
+
+  .form__button-container {
+    display: flex;
+    flex-direction: row;
+    padding-left: 40px;
+  }
+
+  .form__button {
+    flex: 0 1 283px;
+    margin: 0;
+    margin-right: 60px;
+    padding: 0 63px;
+    font-size: 20px;
+  }
+
+  .form__legend {
+   font-size: 16px;
+  }
 }

@@ -1,0 +1,40 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+
+  background-color: @light-gray;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: @font-size;
+  line-height: 20px;
+  font-family: @font-family;
+  color: @black;
+  text-transform: uppercase;
+}
+
+.footer__contacts {}
+
+.footer__social {}
+
+.footer__copyright {}
+
+.footer__bottom-area {
+  padding: 39px 20px 22px;
+}
+
+@media (min-width: @tablet-width) {
+  .footer {
+    background: #fff;
+    background-color: @light-gray;
+  }
+
+  .footer__bottom-area {
+    padding: 56.5px 30px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    background: #f2f2f2;
+  }
+}

@@ -1,0 +1,68 @@
+.gift {
+  min-height: 289px;
+  margin: 39px 20px 35px 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  background-image: url('../img/gift-photo-mobile@1x.jpg');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: auto;
+
+  color: @white;
+  font-family: 'Arial';
+  text-align: center;
+  text-transform: capitalize;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.gift::before {
+  position: absolute;
+  top: 65px;
+  left: 113px;
+
+  content: "";
+  background-image: url('../img/icons/icon-gift.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 55px;
+  height: 60px;
+}
+
+.gift__description {
+  margin: 0;
+  padding: 0 58px 48px 58px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: 'Arial', sans-serif;
+  text-transform: none;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .gift {
+    justify-content: center;
+    min-height: 200px;
+    margin: 69px 30px 76px;
+    padding-left: 421px;
+    padding-right: 122px;
+    /*width: 100%;*/
+    background: none;
+    background-color: gray;
+  }
+
+  .gift::before {
+    left: 90px;
+    top: 65px;
+  }
+
+  .gift__description {
+    padding: 0;
+    text-align: left;
+  }
+}

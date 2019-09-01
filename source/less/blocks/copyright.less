@@ -1,19 +1,26 @@
 .copyright {
-  color: @gray;
-}
-
-.copyright__wrapper {}
-
-.contacts__wrapper--index {
-  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .copyright__name {
+  color: @gray;
   font-family: 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: 400;
   font-size: 16px;
   line-height: 16px;
+  text-transform: none;
 }
 
 .copyright__link {}
 
 .copyright__logo {}
+
+@media (min-width: @tablet-width) {
+  .copyright__name {
+    margin-right: 22px;
+  }
+}

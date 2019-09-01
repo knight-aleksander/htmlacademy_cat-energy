@@ -1,0 +1,27 @@
+.title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1;
+  font-family: @font-family;
+  color: @black;
+  text-transform: none;
+}
+
+.title--catalog {
+  margin: 0;
+  padding: 33.5px 20px;
+  border-bottom: 1px solid #ededed;
+}
+
+@media (min-width: @tablet-width) {
+  .title {
+    padding: 0 30px;
+    font-size: 60px;
+  }
+
+  .title--catalog {
+    padding: 0 30px 80px 30px;
+    border-bottom: none;
+  }
+}

@@ -1,20 +1,69 @@
 .pet-form {
-  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 9px;
 
   font-style: normal;
   font-weight: 400;
   font-size: @font-size;
   line-height: @line-h;
   font-family: @font-family;
-  text-align: center;
   color: @black;
   text-transform: uppercase;
+
+  border-bottom: 1px solid #ededed;
 }
 
 .pet-form__container {}
 
-.pet-form__subcontainer {}
+.pet-form__subcontainer {
+  padding-bottom: 14px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 
-.pet-form__field {}
+.pet-form__label {
+  padding-right: 14px;
+}
 
-.pet-form__value {}
+.pet-form__input {
+  display: flex;
+  flex-grow: 1;
+  padding: 13px;
+  font-family: @font-family;
+  text-transform: uppercase;
+}
+
+.pet-form__input::placeholder {
+  font-family: @font-family;
+  font-size: @font-size;
+  line-height: 1;
+  color: #444444;
+}
+
+@media (min-width: @tablet-width) {
+  .pet-form {
+    margin-bottom: 73px;
+    padding: 0 70px 0 35px;
+    border-bottom: none;
+  }
+
+  .pet-form__subcontainer:last-child {
+    padding-bottom: 0;
+  }
+
+
+  .pet-form__input {
+    min-height: 52px;
+    padding: 0;
+    padding-left: 17px;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .pet-form__input::placeholder {
+    font-size: 20px;
+  }
+
+}
