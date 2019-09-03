@@ -11,7 +11,7 @@
   linear-gradient(to bottom, @green, @green 305px, #fff 305px, #fff);
 }
 
-.program__header {
+.program__container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -64,7 +64,7 @@
     background: none;
   }
 
-  .program__header {
+  .program__container {
     padding-right: 30px;
     min-height: 0;
     background: none;
@@ -100,5 +100,19 @@
     margin-right: auto;
     font-size: 20px;
     text-align: center;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .program {
+    padding-top: 110px;
+  }
+
+  .program__container {
+    padding-bottom: 242px;
+  }
+
+  .program__title {
+    padding-right: 715px;
   }
 }

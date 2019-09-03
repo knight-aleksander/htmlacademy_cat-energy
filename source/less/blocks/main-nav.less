@@ -27,7 +27,7 @@
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
-  line-height: 20px;
+  line-height: 1;
   font-family: @font-family;
   color: @black;
   text-transform: uppercase;
@@ -38,21 +38,18 @@
   }
 
   .main-nav__list {
-    flex-grow: 1;
     flex-direction: row;
-    justify-content: space-between;
+    flex-grow: 0;
+    margin-left: auto;
   }
 
   .main-nav__item {
+    margin-right: 35px;
     border: none;
   }
 
-  .main-nav__item:first-child {
-    text-align: left;
-  }
-
   .main-nav__item:last-child {
-    text-align: right;
+    margin-right: 0;
   }
 
   .main-nav__link {
@@ -71,4 +68,8 @@
 }
 
 @media (min-width: @desktop-width) {
+
+  .main-nav__link {
+    font-size: 20px;
+  }
 }

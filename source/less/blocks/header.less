@@ -20,6 +20,10 @@
   border-bottom: 1px solid #e6e6e6;
 }
 
+.header__logo-link {
+  font-size: 0;
+}
+
 
 @media (min-width: @tablet-width) {
   .header {
@@ -43,12 +47,12 @@
 
 @media (min-width: @desktop-width) {
   .header {
-    height: 59px;
-    flex: 1 1 auto;
-    align-items: center;
+    margin: 0 auto;
+    padding: 54px 40px 0;
   }
-  .header__logo {
-    flex: 0 1 202px;
-    justify-content: flex-start;
+
+  .header__logo-text {
+    width: 118px;
+    height: 22px;
   }
 }
