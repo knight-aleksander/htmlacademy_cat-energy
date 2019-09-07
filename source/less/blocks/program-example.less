@@ -249,3 +249,53 @@
     line-height: 1;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .program-example {
+    flex-flow: row wrap;
+    padding: 0px 40px 0;
+    background: linear-gradient(#fff 0px, #fff 132px, #f2f2f2 132px, #f2f2f2 100%);
+  }
+
+  .program-example__title {
+    flex: 0 1 100%;
+    margin-bottom: 142px;
+  }
+
+  .program-example__text {
+    margin-right: 131px;
+  }
+
+  .program-example__stats {
+    flex: 0 1 570px;
+    flex-flow: row wrap;
+    margin-right: 80px;
+  }
+  .program-example__value-container {
+    margin-bottom: 60px;
+  }
+
+  .program-example__value-container:nth-of-type(2) {
+    margin-right: 200px;
+  }
+
+  .program-example__small {
+    background-color: #f2f2f2;
+  }
+
+  .program-example__result {
+    display: flex;
+    min-width: 327px;
+    margin-left: 0;
+  }
+
+  .program-example__result-price {
+    display: inline-block;
+    margin-left: auto;
+  }
+
+  .program-example__progress {
+    padding: 0;
+    flex: 0 1 570px;
+  }
+}

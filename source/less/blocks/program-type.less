@@ -26,7 +26,7 @@
   text-align: left;
 }
 
-.program-type__container--slim::before {
+.program-type__container::before {
   position: absolute;
   top: 24px;
   left: 22px;
@@ -47,19 +47,6 @@
   background: no-repeat 0 0 url('../img/icons/icon-cat-sit.svg');
   width: 35px;
   height: 49px;
-}
-
-.program-type__container--bulky::before {
-  position: absolute;
-  top: 24px;
-  left: 22px;
-  content: "";
-  background-color: #68b738;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
 }
 
 .program-type__container--bulky::after {
@@ -142,7 +129,7 @@
     padding: 78px 280px 61px 52px;
   }
 
-  .program-type__container--slim::before {
+  .program-type__container::before {
     top: 92px;
     right: 62px;
     left: auto;
@@ -156,14 +143,6 @@
     left: auto;
     width: 140px;
     height: 194px;
-  }
-
-  .program-type__container--bulky::before {
-    top: 92px;
-    right: 62px;
-    left: auto;
-    width: 200px;
-    height: 200px;
   }
 
   .program-type__container--bulky::after {
@@ -180,20 +159,6 @@
     padding: 0;
     font-size: 36px;
     text-transform: uppercase;
-  }
-
-  .program-type__header--slim::before {
-    display: none;
-  }
-  .program-type__header--slim::after {
-    display: none;
-  }
-
-  .program-type__header--bulky::before {
-    display: none;
-  }
-  .program-type__header--bulky::after {
-    display: none;
   }
 
   .program-type__description {
@@ -213,5 +178,59 @@
   .program-type__link::before {
     top: 4.5px;
     left: 132px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .program-type {
+    padding: 0 40px;
+  }
+
+  .program-type__list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .program-type__item {
+    padding: 0;
+  }
+
+  .program-type__item:first-child {
+    margin-right: 80px;
+  }
+
+  .program-type__container {
+    padding-right: 52px;
+  }
+
+  .program-type__container::before {
+    width: 100px;
+    height: 100px;
+    top: 47px;
+    left: 52px;
+  }
+
+  .program-type__container--slim::after {
+    width: 70px;
+    height: 97px;
+    top: 41px;
+    left: 66px;
+  }
+
+  .program-type__container--bulky::after {
+    width: 134px;
+    height: 56px;
+    top: 69px;
+    left: 34px;
+  }
+
+  .program-type__header {
+    margin-bottom: 73px;
+    padding-left: 160px;
+  }
+
+  .program-type__description {
+    margin-bottom: 28px;
+    padding-bottom: 0;
   }
 }

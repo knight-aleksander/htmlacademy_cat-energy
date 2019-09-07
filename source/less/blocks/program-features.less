@@ -151,3 +151,18 @@
     background: no-repeat 125px 0 / contain url("../img/background/4.png");
   }
 }
+
+@media (min-width: @desktop-width) {
+  .program-features {
+    padding: 0 40px;
+    border-bottom: none;
+  }
+
+  .program-features__item {
+    margin-bottom: 0;
+  }
+
+  .program-features__item:nth-last-child(-n+2) {
+    margin-bottom: 0;
+  }
+}
