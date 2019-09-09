@@ -40,14 +40,15 @@
       </ul>
     </nav>
   </header>
-  <main class="page-main">
-    <h1 class="title title--form">Подбор програмы</h1>
-    <section class="wrapper form">
+  <main class="page-main page-main--form">
+    <h1 class="page-main__title page-main__title--form wrapper">Подбор програмы</h1>
+    <section class="form wrapper
+    ">
       <h2 class="visually-hidden">Анкета питомца</h2>
       <p class="form__subheader ">Заполните анкету и&nbsp;мы&nbsp;подберём
         <br>программу питания для вашего кота</p>
       <form class="form__content" action="https://echo.htmlacademy.ru" method="post">
-        <div class="pet-form ">
+        <div class="pet-form">
           <div class="pet-form__container">
             <div class="pet-form__subcontainer">
               <label class="form__label pet-form__label" for="f-name">Имя:*</label>
@@ -62,49 +63,53 @@
               <input class="form__text-input pet-form__input" type="number" id="f-age" name="pet-age" placeholder="7">
             </div>
           </div>
-        </div>
-        <div class="goal-form">
-          <h2 class="visually-hidden">Цель программы</h2>
-          <div class="goal-form__container">
-            <div class="goal-form__subcontainer">
-              <input class="visually-hidden goal-form__input" type="radio" id="f-slim" name="goal" input="slim" checked>
-              <label class="form__label goal-form__label" for="f-slim">Похудение</label>
-            </div>
-            <div class="goal-form__subcontainer">
-              <input class="visually-hidden goal-form__input" type="radio" id="f-mass" name="goal" input="mass">
-              <label class="form__label goal-form__label" for="f-mass">Набор массы</label>
-            </div>
-            <div class="goal-form__subcontainer">
-              <input class="visually-hidden goal-form__input" type="radio" id="f-advice" name="goal" input="need_advice">
-              <label class="form__label goal-form__label" for="f-advice">Не знаю (нужен ваш совет)</label>
+          <div class="goal-form">
+            <h2 class="visually-hidden">Цель программы</h2>
+            <div class="goal-form__container">
+              <div class="goal-form__subcontainer">
+                <input class="visually-hidden goal-form__input" type="radio" id="f-slim" name="goal" input="slim" checked>
+                <label class="form__label goal-form__label" for="f-slim">Похудение</label>
+              </div>
+              <div class="goal-form__subcontainer">
+                <input class="visually-hidden goal-form__input" type="radio" id="f-mass" name="goal" input="mass">
+                <label class="form__label goal-form__label" for="f-mass">Набор массы</label>
+              </div>
+              <div class="goal-form__subcontainer">
+                <input class="visually-hidden goal-form__input" type="radio" id="f-advice" name="goal" input="need_advice">
+                <label class="form__label goal-form__label" for="f-advice">Не знаю (нужен ваш совет)</label>
+              </div>
             </div>
           </div>
         </div>
         <div class="client-form">
-          <div class="form__title-container client-form__title-container">
-            <h2 class="form__title client-form__title">Контактные данные (владельца кота)</h2>
-          </div>
+          <h2 class="form__title client-form__title">
+            <div class="form__title-container">
+              <span class="form__title-self">Контактные данные (владельца кота)</span>
+            </div>
+          </h2>
           <div class="client-form__container">
-            <div class="client-form__subcontainer">
+            <div class="client-form__subcontainer client-form__subcontainer--mail">
               <label class="form__label client-form__label" for="f-email">E-mail:*</label>
               <input class="form__text-input client-form__input" type="email" id="f-email" name="usr-email" placeholder="KUKLACHEV@GMAIL.COM">
             </div>
-            <div class="client-form__subcontainer">
+            <div class="client-form__subcontainer client-form__subcontainer--phone">
               <label class="form__label client-form__label" for="f-phone">Телефон:*</label>
               <input class="form__text-input client-form__input" type="tel" id="f-phone" name="user-phone" placeholder="8 (960) 900-60-90">
             </div>
           </div>
         </div>
         <div class="comment">
-          <div class="form__title-container comment__title-container">
-            <h2 class="form__title comment__title">Комментарий</h2>
+          <h2 class="form__title comment__title">
+            <span class="form__title-self">Комментарий</span>
+          </h2>
+          <div class="comment__container">
+            <textarea class="comment__textarea" name="usr-comment" cols="30" rows="10" placeholder="РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА"></textarea>
           </div>
-          <textarea class="comment__textarea" name="usr-comment" cols="30" rows="10" placeholder="РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА"></textarea>
         </div>
         <div class="conditions">
-          <div class="form__title-container conditions__title-container">
-            <h2 class="form__title conditions__title">Дополнительно</h2>
-          </div>
+          <h2 class="form__title conditions__title">
+            <span class="form__title-self">Дополнительно</span>
+          </h2>
           <div class="conditions__container">
             <div class="conditions__subcontainer">
               <input class="visually-hidden conditions__input" type="checkbox" id="f-sugar" name="conditions" input="sweetener">
@@ -138,8 +143,7 @@
         <p class="contacts__promo">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
         <p class="contacts__address">ул. Большая конюшенная, д. 19/8 <span class="contacts__city">Санкт-Петербург</span></p>
       </div>
-      <div class="contacts__map-container">
-        <img class="contacts__map-image" src="../img/content/map-with-pin.png" alt="" width="320" height="362">
+      <div class="contacts__map">
       </div>
     </section>
     <div class="footer__bottom-area">

@@ -9,7 +9,6 @@
 
 
 .extra-products__title {
-  position: relative;
   margin: 0;
   padding: 37px 0 29px 0;
   text-align: left;
@@ -19,7 +18,29 @@
   font-size: 24px;
   line-height: 24px;
   color: @black;
-  text-transform: none; // border-bottom: 1px solid #ededed;
+  text-transform: none;
+  border-bottom: 1px solid #ededed;
+}
+
+.extra-products__title-self {
+  position: relative;
+  display: inline-flex;
+  flex-direction: row;
+  flex-grow: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: #fff;
+}
+
+.extra-products__title-self::before {
+  position: absolute;
+  content: '';
+  top: 13px;
+  left: 0;
+  width: 100vw;
+  height: 3px;
+  background-color: #68b738;
+  z-index: -1;
 }
 
 .extra-products__list {
@@ -87,28 +108,9 @@
   }
 
   .extra-products__title {
-    padding: 0 30px 80px 67px;
+    padding: 0 30px 80px;
     font-size: 36px;
     line-height: 1;
-  }
-
-  .extra-products__title::before {
-    position: absolute;
-    top: 21px;
-    left: 0;
-    content: "";
-    width: 28px;
-    height: 3px;
-    background-color: #68b738;
-  }
-  .extra-products__title::after {
-    position: absolute;
-    top: 21px;
-    left: 441px;
-    content: "";
-    width: 327px;
-    height: 3px;
-    background-color: #68b738;
   }
 
   .extra-products__list {
@@ -153,5 +155,63 @@
     height: 40px;
     width: 100%;
     padding: 12px 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .extra-products {
+    display: flex;
+    padding-bottom: 86px;
+  }
+
+  .extra-products__wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 0 40px;
+  }
+
+  .extra-products__title {
+    padding: 0 40px 80px;
+    font-size: 36px;
+    line-height: 1;
+  }
+
+  .extra-products__list {
+    flex: 0 1 895px;
+    padding: 0;
+    margin-right: 80px;
+  }
+
+  .extra-products__item {
+    flex-flow: row nowrap;
+    align-items: center;
+    padding: 15px 0 16px;
+    border-top: 1px solid #cdcdcd;
+    border-left: none;
+    border-right: none;
+  }
+
+  .extra-products__item:last-child {
+    border-bottom: 1px solid #cdcdcd;
+  }
+
+  .extra-products__name {
+    flex: 0 1 325px;
+    margin: 0;
+  }
+
+  .extra-products__field {
+    margin: 0;
+  }
+
+  .extra-products__stats {
+    flex: 0 1 285px;
+    margin: 0;
+    margin-right: 40px;
+  }
+
+  .extra-products__buy {
+    width: auto;
+    padding: 0 92px;
   }
 }

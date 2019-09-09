@@ -1,7 +1,8 @@
 .pet-form {
   display: flex;
   flex-direction: column;
-  padding-bottom: 9px;
+
+  padding: 0 20px;
 
   font-style: normal;
   font-weight: 400;
@@ -49,10 +50,13 @@
     border-bottom: none;
   }
 
+  .pet-form__container {
+    margin-bottom: 72px;
+  }
+
   .pet-form__subcontainer:last-child {
     padding-bottom: 0;
   }
-
 
   .pet-form__input {
     min-height: 52px;
@@ -65,5 +69,17 @@
   .pet-form__input::placeholder {
     font-size: 20px;
   }
+}
 
+@media (min-width: @desktop-width) {
+  .pet-form {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .pet-form__container {
+    flex: 0 1 570px;
+    margin: 0;
+  }
 }

@@ -2,37 +2,56 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  padding-top: 28px;
+  padding-bottom: 28px;
 
   font-style: normal;
   font-weight: 400;
   text-transform: uppercase;
 }
 
-.client-form::before {
-  position: absolute;
-  top: 48px;
-  right: 0;
-  content: "";
-  width: 99px;
-  height: 2px;
-  background-color: #68b738;
+.client-form__container {
+  padding: 0 20px;
 }
-
-.client-form__title-container {
-  margin: 35px 0;
-}
-
-.client-form__container {}
 
 .client-form__subcontainer {
-  padding-bottom: 14px;
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding-bottom: 14px;
 }
 
 .client-form__subcontainer:last-child {
   padding-bottom: 0;
+}
+
+.client-form__subcontainer--phone::before {
+  position: absolute;
+  content: '';
+  right: 13px;
+  top: 13px;
+
+  width: 20px;
+  height: 20px;
+  background: no-repeat url("../img/icons/icon-phone.svg") 0 0 / cover;
+  z-index: 10;
+}
+
+.client-form__subcontainer--mail::before {
+  position: absolute;
+  content: '';
+  right: 16px;
+  top: 16px;
+
+  width: 17px;
+  height: 13px;
+  background: no-repeat url("../img/icons/icon-mail.svg") 0 0 / cover;
+  z-index: 10;
+}
+
+.client-form__title {
+  margin-bottom: 33px;
 }
 
 .client-form__label {
@@ -40,6 +59,9 @@
 }
 
 .client-form__input {
+  position: relative;
+  min-height: 45px;
+  padding-left: 14px;
   flex-grow: 1;
 
   font-size: @font-size;
@@ -51,14 +73,23 @@
 
 .client-form__input::placeholder {
   font-family: @font-family;
-  font-size: @font-size;
+  font-size: 16px;
   line-height: 1;
   color: #444444;
 }
 
 @media (min-width: @tablet-width) {
-  .client-form::before {
-    display: none;
+  .client-form {
+    padding: 0;
+    padding-bottom: 66px;
+  }
+
+  .client-form__container {
+    padding: 0;
+  }
+
+  .client-form__title {
+    margin-bottom: 75px;
   }
 
   .client-form__title-container {
@@ -66,8 +97,7 @@
   }
 
   .client-form__subcontainer {
-    padding-left: 70px;
-    padding-right: 65px;
+    padding-left: 40px;
   }
 
   .client-form__input {
@@ -77,5 +107,22 @@
 
   .client-form__input::placeholder {
     font-size: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+
+
+  .client-form__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .client-form__subcontainer {
+    flex: 0 1 570px;
+    padding: 0;
+    padding-left: 70px;
+    padding-right: 65px;
   }
 }

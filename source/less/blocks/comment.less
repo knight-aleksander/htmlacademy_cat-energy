@@ -1,13 +1,20 @@
 .comment {
   display: flex;
   flex-direction: column;
+  padding-bottom: 27px;
 
   font-style: normal;
   font-weight: 400;
 }
 
-.comment__title-container {
-  margin: 21px 0 35px 0;
+.comment__container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.comment__title {
+  margin-bottom: 35px;
 }
 
 .comment__textarea {
@@ -28,12 +35,16 @@
 }
 
 @media (min-width: @tablet-width) {
-  .comment__title-container {
-    margin-top: 65px;
-    margin-bottom: 77px;
+  .comment {
+    padding-bottom: 70px;
+  }
+
+  .comment__title {
+    margin-bottom: 75px;
   }
 
   .comment__textarea {
+    margin-left: 40px;
     max-height: 174px;
     font-size: 20px;
     line-height: 30px;
