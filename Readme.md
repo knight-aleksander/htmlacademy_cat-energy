@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-* Студент: [Тимур K](https://up.htmlacademy.ru/adaptive/13/user/561605).
-* Наставник: [Сергей Козлов](https://htmlacademy.ru/profile/id27386).
+* Студент: [Александр K](https://htmlacademy.ru/profile/javelin).
+* Наставник: ?
 
 ---
 
